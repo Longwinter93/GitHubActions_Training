@@ -1,0 +1,23 @@
+#name of workflow
+name: First Workflow
+#when this workflow should be executed. After on you are going to define events that should trigger this workflow to run. 
+#you can define a lot of events. We manually starts this workflow (user needs to start),
+#because this workflow is configured to run on the workflow_dispatch event. Thus, you need to manually run this workflow (click Run workflow on the Actions)
+on: workflow_dispatch
+#the work that should be done. We get this job a name first-job, then we define a runner (environment) on which the job will execute.
+#we have various windows, ubuntu and macOS environments <- information from docs
+#then, we define steps that will be executed. One step - 
+jobs:
+  first-job: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: echo "Hello World"
+      - name: Print goodbye
+        run: echo "Done - bye!"
+      - name: Running Multi-Line Shell Commands by adding a pipe symbol
+        run: | 
+            echo "First Line"
+            echo "Second Line"
+#The basic workflow named First Workflow with one job and two steps.
+  
