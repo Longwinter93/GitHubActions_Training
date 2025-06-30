@@ -40,9 +40,6 @@ jobs:
   deploy: 
     needs: test
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: Task1
     steps:
       - name: Get code
         uses: actions/checkout@v3
