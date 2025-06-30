@@ -18,7 +18,7 @@ on: [push, workflow_dispatch]
 #allowing subsequent workflow steps to access the codebase
 #Install NodeJS -> https://github.com/actions/setup-node and configure it with specific version
 jobs:
-#first job. This job will be run on Task1 directory
+#first job.
   test:
     runs-on: ubuntu-latest
     steps:
@@ -36,7 +36,6 @@ jobs:
         run: apt list
 #second job
 #Add steps: We build this project by running a command and deploy. 
-#This job will be run on Task1 directory
   deploy: 
     needs: test
     runs-on: ubuntu-latest
