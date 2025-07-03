@@ -9,7 +9,7 @@ on: [push, workflow_dispatch]
 #these jobs will be executed:
 #runs-on - runner - ubuntu-latest - on this runner/env this job or steps will run
 #You must get your code onto this server (ubuntu) that's provided by GitHub.
-#A step will download this code from this GitHub repo onto this runner/server - it is reason why we use a checkout action
+#This step will download this code from this GitHub repo onto this runner/server - it is reason why we use a checkout action
 #run - running command, use - using an action
 #we use it -> https://github.com/marketplace/actions/checkout
 #We can configure this action - there is information on the docs.concurrency: 
@@ -65,7 +65,7 @@ jobs:
 #But we can do it also on another environment - in your case in runner (ubuntu) on GitHub to test our code
 #We use GitHub Action and on runner (environment) to do these steps
 #Running it locally - we obtain the same output as we run it on GitHub Action
-#running locally on your directory:
+#running locally on your directory on the terminal:
 #npm install
 #npm install vite
 #npm run dev
